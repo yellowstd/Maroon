@@ -1,0 +1,2840 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Wedding Invitation
+    </title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<style>
+body.lock{
+    overflow:hidden;
+}
+#mainContent{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.8s ease;
+
+    transform:translateY(20px);
+}
+#mainContent.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+}
+
+  :root{
+
+    /* =========================
+       COLOR SYSTEM
+    ========================= */
+
+    --color-primary: #7A1024;
+    --color-secondary: #D4AF37;
+
+    --color-white: #FFFFFF;
+    --color-black: #1F1F1F;
+
+    /* Background */
+    --bg-primary: var(--color-primary);
+    --bg-light: #FFFFFF;
+    --bg-soft: #FFF8EE;
+    --bg-cover-start: #7A1024;
+    --bg-cover-end: #5C0D1B;
+
+    /* Text */
+    --text-light: #FFFFFF;
+    --text-dark: #1F1F1F;
+    --text-muted: #6B7280;
+    --gold-light: #F3D67A;
+    --gold-main: #D4AF37;
+    --gold-dark: #B68D1E;
+    --color-secondary: var(--gold-main);
+
+    /* Border */
+    --border-color: rgba(212, 175, 55, 0.25);
+
+
+
+    /* =========================
+       TYPOGRAPHY
+    ========================= */
+
+    --font-script: 'Great Vibes', cursive;
+    --font-heading: 'Poppins', serif;
+    --font-body: 'Poppins', sans-serif;
+
+
+
+    /* =========================
+       FONT SIZE
+    ========================= */
+
+    --fs-xs: 0.75rem;
+    --fs-sm: 0.875rem;
+    --fs-md: 1rem;
+    --fs-lg: 1.125rem;
+    --fs-xl: 1.5rem;
+    --fs-2xl: 2rem;
+    --fs-3xl: 3rem;
+    --fs-4xl: 4rem;
+    --fs-5xl: 5rem;
+
+
+
+    /* =========================
+       FONT WEIGHT
+    ========================= */
+
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+
+
+    /* =========================
+       SPACING
+    ========================= */
+
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+    --space-3xl: 4rem;
+    --space-4xl: 6rem;
+
+
+
+    /* =========================
+       BORDER RADIUS
+    ========================= */
+
+    --radius-sm: 0.5rem;
+    --radius-md: 1rem;
+    --radius-lg: 1.5rem;
+    --radius-xl: 2rem;
+    --radius-pill: 999px;
+
+
+
+    /* =========================
+       SHADOW
+    ========================= */
+
+    --shadow-soft:
+        0 4px 20px rgba(0,0,0,.08);
+
+    --shadow-medium:
+        0 8px 30px rgba(0,0,0,.12);
+
+    --shadow-strong:
+        0 15px 50px rgba(0,0,0,.18);
+
+
+
+    /* =========================
+       TRANSITION
+    ========================= */
+
+    --transition-fast: .2s ease;
+    --transition-normal: .3s ease;
+    --transition-slow: .5s ease;
+
+
+
+    /* =========================
+       Z-INDEX
+    ========================= */
+
+    --z-base: 1;
+    --z-content: 10;
+    --z-header: 100;
+    --z-overlay: 500;
+    --z-modal: 1000;
+    --ornament-size:260px;
+    --ornament-opacity:.08;
+}
+
+    /* =========================
+   RESET
+========================= */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/* =========================
+   HTML
+========================= */
+
+html{
+    font-size:16px;
+    scroll-behavior:smooth;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body{
+    font-family:var(--font-body);
+    font-size:var(--fs-md);
+
+    background:var(--bg-primary);
+    color:var(--text-light);
+
+    overflow-x:hidden;
+
+    line-height:1.7;
+}
+
+
+/* =========================
+   MEDIA
+========================= */
+
+img,
+picture,
+video,
+canvas,
+svg{
+    display:block;
+    max-width:100%;
+}
+
+img{
+    height:auto;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+input,
+button,
+textarea,
+select{
+    font:inherit;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button{
+    border:none;
+    outline:none;
+    background:none;
+    cursor:pointer;
+}
+
+
+/* =========================
+   LINK
+========================= */
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+
+/* =========================
+   LIST
+========================= */
+
+ul,
+ol{
+    list-style:none;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+section{
+    position:relative;
+    overflow:hidden;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+    width:min(100% - 2rem, 1200px);
+    margin-inline:auto;
+}
+
+
+/* =========================
+   SELECTION
+========================= */
+
+::selection{
+    background:var(--color-secondary);
+    color:var(--color-white);
+}
+
+/* =========================
+   DISPLAY
+========================= */
+
+.flex{
+    display:flex;
+}
+
+.grid{
+    display:grid;
+}
+
+.block{
+    display:block;
+}
+
+.hidden{
+    display:none;
+}
+
+/* =========================
+   FLEX
+========================= */
+
+.items-center{
+    align-items:center;
+}
+
+.items-start{
+    align-items:flex-start;
+}
+
+.items-end{
+    align-items:flex-end;
+}
+
+.justify-center{
+    justify-content:center;
+}
+
+.justify-between{
+    justify-content:space-between;
+}
+
+.justify-end{
+    justify-content:flex-end;
+}
+
+.flex-column{
+    flex-direction:column;
+}
+
+.flex-wrap{
+    flex-wrap:wrap;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.text-center{
+    text-align:center;
+}
+
+.text-left{
+    text-align:left;
+}
+
+.text-right{
+    text-align:right;
+}
+
+/* =========================
+   WIDTH
+========================= */
+
+.w-full{
+    width:100%;
+}
+
+.h-full{
+    height:100%;
+}
+
+/* =========================
+   SPACING
+========================= */
+
+.section-padding{
+    padding:
+    var(--space-4xl)
+    0;
+}
+
+.mb-xs{
+    margin-bottom:var(--space-xs);
+}
+
+.mb-sm{
+    margin-bottom:var(--space-sm);
+}
+
+.mb-md{
+    margin-bottom:var(--space-md);
+}
+
+.mb-lg{
+    margin-bottom:var(--space-lg);
+}
+
+.mb-xl{
+    margin-bottom:var(--space-xl);
+}
+
+.mb-2xl{
+    margin-bottom:var(--space-2xl);
+}
+
+/* =========================
+   POSITION
+========================= */
+
+.relative{
+    position:relative;
+}
+
+.absolute{
+    position:absolute;
+}
+
+/* =========================
+   BORDER RADIUS
+========================= */
+
+.radius-sm{
+    border-radius:var(--radius-sm);
+}
+
+.radius-md{
+    border-radius:var(--radius-md);
+}
+
+.radius-lg{
+    border-radius:var(--radius-lg);
+}
+
+.radius-xl{
+    border-radius:var(--radius-xl);
+}
+
+/* =========================
+   SHADOW
+========================= */
+
+.shadow-soft{
+    box-shadow:var(--shadow-soft);
+}
+
+.shadow-medium{
+    box-shadow:var(--shadow-medium);
+}
+
+.shadow-strong{
+    box-shadow:var(--shadow-strong);
+}
+
+/* =========================
+   REVEAL SYSTEM
+========================= */
+
+.reveal{
+
+    opacity:0;
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+    will-change:
+        opacity,
+        transform;
+}
+
+.reveal.is-visible{
+
+    opacity:1;
+
+    transform:none;
+}
+.reveal-up{
+
+    transform:
+        translateY(50px);
+}
+.reveal-down{
+
+    transform:
+        translateY(-50px);
+}
+.reveal-left{
+
+    transform:
+        translateX(-50px);
+}
+.reveal-right{
+
+    transform:
+        translateX(50px);
+}
+.reveal-scale{
+
+    transform:
+        scale(.85);
+}
+.reveal-rotate{
+
+    transform:
+        rotate(-8deg)
+        scale(.9);
+}
+.delay-1{
+    transition-delay:.1s;
+}
+
+.delay-2{
+    transition-delay:.2s;
+}
+
+.delay-3{
+    transition-delay:.3s;
+}
+
+.delay-4{
+    transition-delay:.4s;
+}
+
+.delay-5{
+    transition-delay:.5s;
+}
+
+
+/* =========================
+   COVER
+========================= */
+
+.cover{
+    position:relative;
+
+    min-height:100svh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--bg-cover-start),
+            var(--bg-cover-end)
+        );
+        
+    transition:
+        opacity .8s ease,
+        visibility .8s ease;
+}
+
+/* hide state */
+.cover.hide{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+}
+
+/* =========================
+   TEXTURE LAYER
+========================= */
+
+.cover::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background-image:url('granit.png');
+    background-size:cover;
+    background-position:center;
+
+    opacity:.07; /* sedikit lebih soft dari sebelumnya */
+    pointer-events:none;
+}
+
+/* =========================
+   LIGHT GLOW LUXURY LAYER (NEW)
+========================= */
+
+.cover::after{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(212,175,55,0.08),
+            transparent 60%
+        );
+
+    pointer-events:none;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.cover-content{
+    position:relative;
+    z-index:10;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    text-align:center;
+
+    max-width:420px;
+    margin-inline:auto;
+
+    gap:.85rem; /* bikin spacing lebih “mahal” */
+}
+
+/* =========================
+   FRAME
+========================= */
+
+.frame-name{
+    width:210px;
+    margin-bottom:.5rem;
+
+    filter: brightness(1.05) contrast(1.05);
+}
+
+/* =========================
+   TITLE (HERO)
+========================= */
+
+.cover-title{
+    font-family:var(--font-script);
+
+    font-size:clamp(3rem,10vw,4.3rem);
+    line-height:1;
+
+    color:var(--color-secondary);
+
+    margin-bottom:.5rem;
+}
+
+.cover-title span{
+    display:block;
+    font-size:1.8rem;
+    margin:.2rem 0;
+}
+
+/* =========================
+   LABEL
+========================= */
+
+.cover-label{
+    font-size:.72rem;
+    letter-spacing:6px;
+
+    margin-bottom:.5rem;
+
+    color:var(--text-light);
+    opacity:.75;
+}
+
+/* =========================
+   DATE
+========================= */
+
+.cover-date{
+    font-family:var(--font-body);
+    font-size:1.15rem;
+
+    margin-bottom:1rem;
+
+    letter-spacing:1px;
+    opacity:.9;
+}
+
+/* =========================
+   GUEST INFO
+========================= */
+
+.guest-info{
+    margin-bottom:1rem;
+}
+
+.guest-info span{
+    font-size:.8rem;
+    opacity:.65;
+}
+
+.guest-info h3{
+    font-family:var(--font-heading);
+    font-size:1.3rem;
+    margin-top:.25rem;
+}
+
+/* =========================
+   BUTTON (POLISHED)
+========================= */
+
+.btn-primary{
+    position:relative;
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    min-width:180px;
+
+    padding:.85rem 1.75rem;
+
+    background:var(--color-secondary);
+    color:var(--color-white);
+
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:var(--radius-pill);
+
+    font-size:.9rem;
+    font-weight:var(--fw-medium);
+
+    letter-spacing:.5px;
+
+    transition:all .35s ease;
+
+    overflow:hidden;
+
+    z-index:10;
+}
+
+/* hover upgrade (lebih smooth, less “kaku”) */
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+/* shimmer tetap */
+.btn-primary::before{
+    content:"";
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:40%;
+    height:100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.35),
+            transparent
+        );
+
+    transition:.8s;
+}
+
+.btn-primary:hover::before{
+    left:120%;
+}
+
+/* =========================
+   ORNAMENT
+========================= */
+
+.cover-ornament{
+    position:absolute;
+
+    width:280px;
+    height:280px;
+
+    background-image:url('bg-ornament.png');
+    background-repeat:no-repeat;
+    background-size:contain;
+
+    opacity:.12; /* sedikit diturunkan biar tidak “nabrak” UI */
+
+    z-index:1;
+}
+
+.ornament-top{
+    top:-60px;
+    left:-60px;
+}
+
+.ornament-bottom{
+    right:-60px;
+    bottom:-60px;
+    transform:rotate(180deg);
+}
+
+/* =========================
+   MUSIC BUTTON
+========================= */
+
+.music-btn{
+    position:fixed;
+
+    right:1.5rem;
+    bottom:1.5rem;
+
+    width:52px;
+    height:52px;
+
+    border-radius:50%;
+
+    background:var(--color-secondary);
+    color:var(--color-white);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    z-index:var(--z-modal);
+}
+
+.music-btn.playing{
+    animation:spin 5s linear infinite;
+}
+
+@keyframes spin{
+    from{ transform:rotate(0deg); }
+    to{ transform:rotate(360deg); }
+}
+
+
+/* =========================
+   OPENING WRAPPER CLEAN
+========================= */
+
+.opening-wrapper{
+    position:relative;
+    display:flex;
+    justify-content:center;
+}
+
+/* soft ornament glow (NO SHADOW STYLE) */
+.opening-glow{
+    position:absolute;
+    width:520px;
+    height:520px;
+
+    background: radial-gradient(
+        circle,
+        rgba(212,175,55,.12),
+        transparent 65%
+    );
+
+    top:-140px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:0;
+}
+
+/* =========================
+   OPENING CARD (NO SHADOW)
+========================= */
+
+.opening-card{
+    position:relative;
+    z-index:2;
+
+    max-width:750px;
+    padding:3.5rem 2.5rem;
+
+    text-align:center;
+
+    border-radius:28px;
+
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(212,175,55,0.18);
+}
+
+/* =========================
+   KICKER
+========================= */
+
+.opening-kicker{
+    display:block;
+    font-size:.75rem;
+    letter-spacing:4px;
+    color: var(--gold-main);
+    opacity:.9;
+    margin-bottom:1.2rem;
+}
+
+/* =========================
+   TITLE (PAKAI FONT SCRIPT)
+========================= */
+
+.opening-title{
+    font-family: var(--font-script); /* ini sama seperti nama pengantin */
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    line-height:1.3;
+
+    margin-bottom:1.5rem;
+
+    background: linear-gradient(
+        135deg,
+        var(--color-white),
+        var(--gold-main),
+        var(--gold-light)
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* =========================
+   TEXT BODY
+========================= */
+
+.opening-text{
+    color: var(--text-light);
+    opacity:.85;
+    line-height:1.9;
+    margin-bottom:2rem;
+}
+
+/* =========================
+   DIVIDER GOLD LINE STYLE
+========================= */
+
+.opening-divider{
+    font-size:1.8rem;
+    color: var(--gold-main);
+    margin:1.5rem 0;
+    opacity:.9;
+}
+
+/* =========================
+   VERSE CARD (CLEAN)
+========================= */
+
+.verse-card{
+    margin-top:1rem;
+    padding:2rem;
+
+    border-radius:20px;
+
+    background: rgba(0,0,0,.18);
+    border: 1px solid rgba(212,175,55,.15);
+}
+
+/* verse text */
+.opening-verse{
+    font-style:italic;
+    font-size:1.05rem;
+    line-height:2;
+
+    color: var(--text-light);
+    opacity:.9;
+}
+
+/* source */
+.opening-source{
+    display:block;
+    margin-top:1rem;
+
+    color: var(--gold-main);
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+
+/* =========================
+   COUPLE LAYOUT
+========================= */
+
+.couple-wrapper{
+    text-align:center;
+}
+
+/* grid layout */
+.couple-grid{
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    align-items:center;
+    gap:2rem;
+}
+
+/* =========================
+   COUPLE CARD
+========================= */
+
+.couple-card{
+    padding:2.5rem 2rem;
+    border-radius:28px;
+
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(212,175,55,0.15);
+
+    backdrop-filter: blur(14px);
+}
+
+/* =========================
+   PHOTO STYLE
+========================= */
+
+.couple-photo{
+    width:180px;
+    height:220px;
+    margin:0 auto 1.5rem;
+
+    border-radius:120px 120px 20px 20px;
+    overflow:hidden;
+
+    border: 1px solid rgba(212,175,55,0.2);
+}
+
+.couple-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* =========================
+   NAME (SCRIPT FONT)
+========================= */
+
+.couple-name{
+    font-family: var(--font-script);
+    font-size:2rem;
+
+    background: linear-gradient(
+        135deg,
+        var(--color-white),
+        var(--gold-main),
+        var(--gold-light)
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    margin-bottom:.5rem;
+}
+
+
+/* =========================
+   MAIN DATE CARD
+========================= */
+
+.date-main{
+    max-width:520px;
+    margin:0 auto 3rem;
+    padding:2.5rem 2rem;
+
+    border-radius:28px;
+
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(212,175,55,0.18);
+}
+
+.date-number{
+    font-family: var(--font-script);
+    font-size:2.8rem;
+
+    background: linear-gradient(
+        135deg,
+        var(--color-white),
+        var(--gold-main),
+        var(--gold-light)
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    margin-bottom:.5rem;
+}
+
+.date-sub{
+    color: var(--text-light);
+    opacity:.85;
+    letter-spacing:1px;
+}
+
+/* =========================
+   EVENT GRID
+========================= */
+
+.event-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:2rem;
+    margin-top:2.5rem;
+}
+
+/* =========================
+   EVENT CARD
+========================= */
+
+.event-card{
+    padding:2rem;
+    border-radius:24px;
+
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(212,175,55,0.15);
+}
+
+.event-title{
+    font-family: var(--font-script);
+    font-size:1.8rem;
+
+    color: var(--gold-main);
+
+    margin-bottom:1rem;
+}
+
+.event-time{
+    color: var(--text-light);
+    opacity:.9;
+    margin-bottom:.5rem;
+}
+
+.event-place{
+    color: var(--text-light);
+    opacity:.7;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px){
+    .event-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.couple-desc{
+    color: var(--text-light);
+    opacity:.85;
+    font-size:.95rem;
+}
+
+/* =========================
+   DIVIDER (CENTER ICON)
+========================= */
+
+.couple-divider{
+    font-size:2rem;
+    color: var(--gold-main);
+    opacity:.9;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px){
+    .couple-grid{
+        grid-template-columns:1fr;
+    }
+
+    .couple-divider{
+        margin:1rem 0;
+    }
+}
+
+/* =========================
+   COUNTDOWN WRAPPER
+========================= */
+
+.countdown-wrapper{
+    margin:3rem 0;
+    text-align:center;
+}
+
+.countdown-title{
+    font-family: var(--font-script);
+    font-size:2rem;
+
+    background: linear-gradient(
+        135deg,
+        var(--color-white),
+        var(--gold-main),
+        var(--gold-light)
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    margin-bottom:1.5rem;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.countdown-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1rem;
+}
+
+/* =========================
+   BOX
+========================= */
+
+.countdown-box{
+    padding:1.5rem 1rem;
+    border-radius:20px;
+
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(212,175,55,0.15);
+}
+
+.countdown-box div{
+    font-family: var(--font-script);
+    font-size:2rem;
+
+    color: var(--gold-main);
+}
+
+.countdown-box span{
+    display:block;
+    margin-top:.5rem;
+    font-size:.85rem;
+    color: var(--text-light);
+    opacity:.8;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px){
+    .countdown-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+
+/* =========================
+   TIMELINE WRAPPER
+========================= */
+
+.story-timeline{
+    position:relative;
+    max-width:800px;
+    margin:auto;
+}
+
+/* center line */
+.story-timeline::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    bottom:0;
+
+    width:1px;
+    background: rgba(212,175,55,0.25);
+    transform:translateX(-50%);
+}
+
+/* =========================
+   ITEM
+========================= */
+
+.story-item{
+    position:relative;
+    display:flex;
+    justify-content:flex-start;
+    margin-bottom:3rem;
+}
+
+/* alternating layout */
+.story-item:nth-child(even){
+    justify-content:flex-end;
+}
+
+/* dot */
+.story-dot{
+    position:absolute;
+    left:50%;
+    top:20px;
+
+    width:10px;
+    height:10px;
+    border-radius:50%;
+
+    background: var(--gold-main);
+    transform:translateX(-50%);
+}
+
+/* =========================
+   CARD
+========================= */
+
+.story-card{
+    width:45%;
+    padding:2rem;
+    border-radius:24px;
+
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(212,175,55,0.15);
+}
+
+/* title */
+.story-title{
+    font-family: var(--font-script);
+    font-size:1.8rem;
+
+    color: var(--gold-main);
+    margin-bottom:1rem;
+}
+
+/* text */
+.story-text{
+    color: var(--text-light);
+    opacity:.85;
+    line-height:1.8;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px){
+
+    .story-timeline::before{
+        left:10px;
+    }
+
+    .story-item{
+        justify-content:flex-start !important;
+        padding-left:2rem;
+    }
+
+    .story-card{
+        width:100%;
+    }
+
+    .story-dot{
+        left:10px;
+    }
+}
+
+
+/* =========================
+   STORY PHOTO
+========================= */
+
+.story-photo{
+    width:100%;
+    height:180px;
+
+    border-radius:18px;
+    overflow:hidden;
+
+    margin-bottom:1.2rem;
+
+    border: 1px solid rgba(212,175,55,0.15);
+}
+
+/* image style */
+.story-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    transition: transform .6s ease;
+}
+
+/* hover cinematic zoom */
+.story-card:hover .story-photo img{
+    transform: scale(1.08);
+}
+
+/* =========================
+   CARD UPDATE (lebih clean spacing)
+========================= */
+
+.story-card{
+    width:45%;
+    padding:1.5rem;
+    border-radius:24px;
+
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(212,175,55,0.15);
+}
+
+
+/* =========================
+   MASONRY GRID
+========================= */
+
+.masonry{
+    column-count:3;
+    column-gap:1.2rem;
+}
+
+/* responsive columns */
+@media (max-width: 992px){
+    .masonry{
+        column-count:2;
+    }
+}
+
+@media (max-width: 600px){
+    .masonry{
+        column-count:1;
+    }
+}
+
+/* =========================
+   ITEM
+========================= */
+
+.masonry-item{
+    break-inside: avoid;
+    margin-bottom:1.2rem;
+
+    border-radius:18px;
+    overflow:hidden;
+
+    border: 1px solid rgba(212,175,55,0.12);
+
+    background: rgba(255,255,255,0.03);
+}
+
+/* image */
+.masonry-item img{
+    width:100%;
+    display:block;
+
+    transition: transform .6s ease;
+}
+
+/* hover cinematic */
+.masonry-item:hover img{
+    transform: scale(1.06);
+}
+
+/* subtle overlay (no shadow style) */
+.masonry-item::after{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,.25),
+        transparent
+    );
+
+    opacity:0;
+    transition:.4s ease;
+}
+
+.masonry-item:hover::after{
+    opacity:1;
+}
+
+
+/* =========================
+   LOVE CONTAINER
+========================= */
+
+#love-container{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:9999;
+}
+
+/* heart item */
+.love{
+    position:absolute;
+    font-size:20px;
+    color: var(--gold-main);
+
+    animation: floatUp 1.5s ease forwards;
+    opacity:0.9;
+}
+
+/* float animation */
+@keyframes floatUp{
+    0%{
+        transform: translateY(0) scale(1);
+        opacity:1;
+    }
+    100%{
+        transform: translateY(-120px) scale(1.5);
+        opacity:0;
+    }
+}
+
+
+/* =========================
+   RSVP CARD
+========================= */
+
+.rsvp-card{
+    max-width:650px;
+    margin:auto;
+
+    padding:2.5rem;
+    border-radius:28px;
+
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(212,175,55,0.15);
+}
+
+/* =========================
+   FORM
+========================= */
+
+.rsvp-form{
+    display:flex;
+    flex-direction:column;
+    gap:1.5rem;
+}
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+    gap:.5rem;
+    text-align:left;
+}
+
+.form-group label{
+    font-size:.85rem;
+    color: var(--gold-main);
+    letter-spacing:1px;
+}
+
+/* inputs */
+.form-group input,
+.form-group select,
+.form-group textarea{
+    padding:1rem;
+    border-radius:14px;
+
+    background: rgba(0,0,0,0.25);
+    border: 1px solid rgba(212,175,55,0.12);
+
+    color: var(--text-light);
+
+    outline:none;
+}
+
+/* focus effect (no shadow) */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-color: rgba(212,175,55,0.4);
+}
+
+
+/* =========================
+   GIFT CARD
+========================= */
+
+.gift-card{
+    max-width:700px;
+    margin:auto;
+
+    padding:3rem 2rem;
+    border-radius:28px;
+
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(212,175,55,0.15);
+
+    text-align:center;
+
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+}
+
+/* =========================
+   ITEM
+========================= */
+
+.gift-title{
+    font-family: var(--font-script);
+    font-size:1.8rem;
+    color: var(--gold-main);
+    margin-bottom:.5rem;
+}
+
+.gift-number{
+    font-size:1.1rem;
+    color: var(--text-light);
+    letter-spacing:1px;
+}
+
+.gift-name{
+    font-size:.9rem;
+    color: var(--text-light);
+    opacity:.75;
+    margin-top:.3rem;
+}
+
+/* =========================
+   QR IMAGE
+========================= */
+
+.gift-qr{
+    width:180px;
+    height:180px;
+
+    margin:1rem auto;
+
+    border-radius:18px;
+    overflow:hidden;
+
+    border: 1px solid rgba(212,175,55,0.15);
+}
+
+.gift-qr img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* =========================
+   DIVIDER
+========================= */
+
+.gift-divider{
+    font-size:1.8rem;
+    color: var(--gold-main);
+    opacity:.8;
+}
+
+
+/* =========================
+   COPY WRAPPER
+========================= */
+
+.gift-copy-wrap{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:1rem;
+    margin: .5rem 0;
+}
+
+/* =========================
+   COPY BUTTON
+========================= */
+
+.copy-btn{
+    padding:.4rem .9rem;
+    font-size:.8rem;
+
+    border-radius:999px;
+
+    background: transparent;
+    border: 1px solid rgba(212,175,55,0.4);
+
+    color: var(--gold-main);
+
+    cursor:pointer;
+
+    transition:.3s ease;
+}
+
+.copy-btn:hover{
+    border-color: rgba(212,175,55,0.8);
+    color: var(--color-white);
+}
+
+
+/* =========================
+   CLOSING WRAPPER
+========================= */
+
+.closing-wrapper{
+    max-width:750px;
+    margin:auto;
+
+    padding:3rem 2rem;
+    border-radius:28px;
+
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(212,175,55,0.15);
+
+    text-align:center;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.closing-title{
+    font-family: var(--font-script);
+    font-size:2.5rem;
+
+    background: linear-gradient(
+        135deg,
+        var(--color-white),
+        var(--gold-main),
+        var(--gold-light)
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    margin-bottom:1.5rem;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.closing-text{
+    color: var(--text-light);
+    opacity:.85;
+    line-height:1.9;
+    margin-bottom:2rem;
+}
+
+/* =========================
+   DIVIDER
+========================= */
+
+.closing-divider{
+    font-size:1.8rem;
+    color: var(--gold-main);
+    margin:1.5rem 0;
+}
+
+/* =========================
+   DOA
+========================= */
+
+.closing-doa{
+    font-style:italic;
+    color: var(--text-light);
+    opacity:.9;
+    line-height:2;
+    margin-bottom:2.5rem;
+}
+
+/* =========================
+   SIGNATURE
+========================= */
+
+.closing-signature{
+    margin-top:1rem;
+}
+
+.signature-name{
+    font-family: var(--font-script);
+    font-size:2rem;
+
+    color: var(--gold-main);
+    margin-bottom:.5rem;
+}
+
+.signature-label{
+    font-size:.9rem;
+    color: var(--text-light);
+    opacity:.75;
+}
+
+
+/* =========================
+   CLOSING PHOTO
+========================= */
+
+.closing-photo{
+    width:100%;
+    height:260px;
+
+    border-radius:24px;
+    overflow:hidden;
+
+    margin-bottom:2rem;
+
+    border: 1px solid rgba(212,175,55,0.15);
+}
+
+/* image */
+.closing-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    transition: transform .6s ease;
+}
+
+/* soft zoom on hover (optional) */
+.closing-wrapper:hover .closing-photo img{
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   FOOTER BASE
+========================= */
+
+.footer{
+    padding:3rem 0 2rem;
+}
+
+/* FORCE CENTER */
+.footer-inner{
+    max-width:600px;
+    margin:auto;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+}
+
+/* =========================
+   DIVIDER CENTER FIX
+========================= */
+
+.footer-divider{
+    width:120px;
+    height:1px;
+
+    margin:0 auto 2rem;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold-main),
+        transparent
+    );
+
+    opacity:.7;
+}
+
+/* =========================
+   BRAND
+========================= */
+
+.footer-brand{
+    font-family: var(--font-script);
+    font-size:2rem;
+
+    background: linear-gradient(
+        135deg,
+        var(--color-white),
+        var(--gold-main),
+        var(--gold-light)
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    margin-bottom:1rem;
+
+    text-align:center;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.footer-text{
+    font-size:.9rem;
+    color: var(--text-light);
+    opacity:.7;
+    margin-bottom:1.5rem;
+
+    text-align:center;
+}
+
+/* =========================
+   IG LINK
+========================= */
+
+.footer-ig{
+    display:inline-block;
+
+    font-size:.95rem;
+    color: var(--gold-main);
+
+    letter-spacing:1px;
+    text-decoration:none;
+
+    text-align:center;
+
+    transition:.3s ease;
+}
+
+.footer-ig:hover{
+    color: var(--color-white);
+    opacity:.9;
+}
+
+</style>
+<body>
+<!-- COVER -->
+<section id="cover" class="cover">
+
+    <!-- Ornament -->
+    <div class="cover-ornament ornament-top"></div>
+    <div class="cover-ornament ornament-bottom"></div>
+
+    <!-- SOFT GLOW (NEW) -->
+    <div class="cover-glow"></div>
+
+    <div class="container">
+
+        <div class="cover-content">
+
+            
+<!-- FRAME (SEPARATE BLOCK) -->
+<div class="cover-frame">
+    <img
+        src="frame-name.png"
+        alt=""
+        class="frame-name">
+</div>
+
+<!-- LABEL -->
+<p class="cover-label">
+    THE WEDDING OF
+</p>
+
+<!-- NAMA -->
+<h1 class="cover-title">
+    Diana
+    <span>&</span>
+    Rizky
+</h1>
+
+<!-- DATE -->
+<p class="cover-date">
+    10•10•26
+</p>
+
+<!-- GUEST -->
+<div class="guest-info">
+
+    <span>Kepada Yth.</span>
+
+    <h3 id="guestName">
+        Tamu Undangan
+    </h3>
+
+</div>
+
+            <!-- Button -->
+            <button
+                id="openInvitation"
+                class="btn-primary">
+
+                Buka Undangan
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- OPENING PREMIUM -->
+<section id="opening" class="section opening section-padding">
+
+    <div class="container">
+
+        <div class="opening-wrapper reveal reveal-up">
+
+            <!-- soft glow ornament -->
+            <div class="opening-glow"></div>
+
+            <!-- CARD -->
+            <div class="glass opening-card">
+
+                <!-- KICKER -->
+                <span class="opening-kicker">
+                    BISMILLAHIRRAHMANIRRAHIM
+                </span>
+
+                <!-- TITLE (SCRIPT FONT / SAME AS COUPLE NAME) -->
+                <h2 class="opening-title">
+                    Dengan Memohon Rahmat & Ridho Allah SWT
+                </h2>
+
+                <!-- TEXT -->
+                <p class="opening-text">
+                    Tanpa mengurangi rasa hormat,
+                    kami mengundang Bapak/Ibu/Saudara/i
+                    untuk hadir dalam acara pernikahan kami
+                    yang insyaAllah akan dilaksanakan dengan penuh keberkahan.
+                </p>
+
+                <!-- DIVIDER -->
+                <div class="opening-divider">
+                    ❦
+                </div>
+
+                <!-- VERSE BOX -->
+                <div class="verse-card">
+
+                    <p class="opening-verse">
+                        “Dan di antara tanda-tanda kekuasaan-Nya
+                        Dia menciptakan untukmu pasangan hidup dari jenismu sendiri
+                        agar kamu merasa tenteram kepadanya…”
+                    </p>
+
+                    <span class="opening-source">
+                        QS. Ar-Rum : 21
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- COUPLE -->
+<section id="couple" class="section section-padding">
+
+    <div class="container">
+
+        <div class="couple-wrapper">
+
+            <!-- HEADER -->
+            <div class="text-center mb-2xl reveal reveal-up">
+
+                <h2 class="opening-title">
+                    Mempelai
+                </h2>
+
+                <p class="opening-text">
+                    Dengan segala kerendahan hati,
+                    kami mempersembahkan kedua mempelai
+                </p>
+
+            </div>
+
+            <!-- CONTENT -->
+            <div class="couple-grid">
+
+                <!-- GROOM -->
+                <div class="couple-card glass reveal reveal-left">
+
+                    <div class="couple-photo">
+                        <img src="mempelaipria.jpg" alt="Groom">
+                    </div>
+
+                    <h3 class="couple-name">
+                        Rizky Pratama
+                    </h3>
+
+                    <p class="couple-desc">
+                        Putra dari Bapak Lorem & Ibu Ipsum
+                    </p>
+
+                </div>
+
+                <!-- HEART DIVIDER -->
+                <div class="couple-divider reveal reveal-scale">
+                    ❦
+                </div>
+
+                <!-- BRIDE -->
+                <div class="couple-card glass reveal reveal-right">
+
+                    <div class="couple-photo">
+                        <img src="mempelaiwanita.jpg" alt="Bride">
+                    </div>
+
+                    <h3 class="couple-name">
+                        Diana Putri
+                    </h3>
+
+                    <p class="couple-desc">
+                        Putri dari Bapak Dolor & Ibu Sit Amet
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SAVE THE DATE -->
+<section id="save-date" class="section section-padding">
+
+    <div class="container text-center">
+
+        <!-- HEADER -->
+        <div class="mb-2xl reveal reveal-up">
+
+            <h2 class="opening-title">
+                Save The Date
+            </h2>
+
+            <p class="opening-text">
+                Dengan memohon rahmat Allah SWT,
+                kami mengundang Anda untuk hadir pada hari bahagia kami
+            </p>
+
+        </div>
+
+        <!-- DATE CARD -->
+        <div class="date-main glass reveal reveal-scale">
+
+            <div class="date-number">
+                10 • 10 • 2026
+            </div>
+
+            <div class="date-sub">
+                Minggu, 10 Oktober 2026
+            </div>
+
+        </div>
+        
+        <!-- COUNTDOWN -->
+<div class="countdown-wrapper reveal reveal-scale">
+
+    <div class="countdown-title">
+        Menuju Hari Bahagia
+    </div>
+
+    <div class="countdown-grid">
+
+        <div class="countdown-box glass">
+            <div id="days">00</div>
+            <span>Hari</span>
+        </div>
+
+        <div class="countdown-box glass">
+            <div id="hours">00</div>
+            <span>Jam</span>
+        </div>
+
+        <div class="countdown-box glass">
+            <div id="minutes">00</div>
+            <span>Menit</span>
+        </div>
+
+        <div class="countdown-box glass">
+            <div id="seconds">00</div>
+            <span>Detik</span>
+        </div>
+
+    </div>
+
+</div>
+
+        <!-- EVENT CARDS -->
+        <div class="event-grid">
+
+            <!-- AKAD -->
+            <div class="event-card glass reveal reveal-left">
+
+                <h3 class="event-title">
+                    Akad Nikah
+                </h3>
+
+                <p class="event-time">
+                    08.00 WIB - Selesai
+                </p>
+
+                <p class="event-place">
+                    Gedung Serbaguna
+                </p>
+
+            </div>
+
+            <!-- RESEPSI -->
+            <div class="event-card glass reveal reveal-right">
+
+                <h3 class="event-title">
+                    Resepsi
+                </h3>
+
+                <p class="event-time">
+                    11.00 - 14.00 WIB
+                </p>
+
+                <p class="event-place">
+                    Gedung Serbaguna
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- EVENT LOCATION -->
+<section id="event" class="section section-padding">
+
+    <div class="container text-center">
+
+        <div class="reveal reveal-up">
+
+            <h2 class="opening-title">Lokasi Acara</h2>
+
+            <p class="opening-text">
+                Gedung Serbaguna Harmoni<br>
+                Jl. Contoh No. 123, Kota
+            </p>
+
+            <a href="#" class="btn-primary">
+                Lihat di Maps
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- LOVE STORY -->
+<section id="love-story" class="section section-padding">
+
+    <div class="container">
+
+        <div class="text-center mb-2xl reveal reveal-up">
+
+            <h2 class="opening-title">Love Story</h2>
+
+            <p class="opening-text">
+                Perjalanan yang Allah takdirkan untuk kami
+            </p>
+
+        </div>
+
+        <div class="story-timeline">
+
+            <!-- 1 -->
+            <div class="story-item reveal reveal-left">
+
+                <div class="story-dot"></div>
+
+                <div class="glass story-card">
+
+                    <div class="story-photo">
+                        <img src="story1.jpg" alt="">
+                    </div>
+
+                    <h3 class="story-title">First Meet</h3>
+
+                    <p class="story-text">
+                        Kami pertama kali bertemu dalam momen sederhana yang tidak kami sangka sebelumnya.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- 2 -->
+            <div class="story-item reveal reveal-right">
+
+                <div class="story-dot"></div>
+
+                <div class="glass story-card">
+
+                    <div class="story-photo">
+                        <img src="story2.jpg" alt="">
+                    </div>
+
+                    <h3 class="story-title">Relationship</h3>
+
+                    <p class="story-text">
+                        Perlahan kami saling mengenal dan tumbuh bersama dalam banyak cerita.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- 3 -->
+            <div class="story-item reveal reveal-left">
+
+                <div class="story-dot"></div>
+
+                <div class="glass story-card">
+
+                    <div class="story-photo">
+                        <img src="story3.jpg" alt="">
+                    </div>
+
+                    <h3 class="story-title">Engagement</h3>
+
+                    <p class="story-text">
+                        Dengan doa dan keyakinan, kami memutuskan untuk melangkah ke jenjang yang lebih serius.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section section-padding">
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="text-center mb-2xl reveal reveal-up">
+
+            <h2 class="opening-title">
+                Gallery
+            </h2>
+
+            <p class="opening-text">
+                Momen indah yang kami abadikan bersama
+            </p>
+
+        </div>
+<!-- LOVE FLOAT CONTAINER -->
+<div id="love-container"></div>
+        <!-- MASONRY GRID -->
+        <div class="masonry">
+
+            <div class="masonry-item reveal reveal-up">
+                <img src="g1.jpg" alt="">
+            </div>
+
+            <div class="masonry-item reveal reveal-left">
+                <img src="g2.jpg" alt="">
+            </div>
+
+            <div class="masonry-item reveal reveal-right">
+                <img src="g3.jpg" alt="">
+            </div>
+
+            <div class="masonry-item reveal reveal-scale">
+                <img src="g4.jpg" alt="">
+            </div>
+
+            <div class="masonry-item reveal reveal-left">
+                <img src="g5.jpg" alt="">
+            </div>
+
+            <div class="masonry-item reveal reveal-right">
+                <img src="g6.jpg" alt="">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- RSVP -->
+<section id="rsvp" class="section section-padding">
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="text-center mb-2xl reveal reveal-up">
+
+            <h2 class="opening-title">
+                RSVP
+            </h2>
+
+            <p class="opening-text">
+                Mohon konfirmasi kehadiran Anda
+            </p>
+
+        </div>
+
+        <!-- FORM CARD -->
+        <div class="glass rsvp-card reveal reveal-scale">
+
+            <form id="rsvpForm" class="rsvp-form">
+
+                <!-- NAME -->
+                <div class="form-group">
+                    <label>Nama</label>
+                    <input type="text" placeholder="Nama Anda" required>
+                </div>
+
+                <!-- ATTENDANCE -->
+                <div class="form-group">
+                    <label>Kehadiran</label>
+                    <select required>
+                        <option value="">Pilih</option>
+                        <option value="hadir">Hadir</option>
+                        <option value="tidak">Tidak Hadir</option>
+                    </select>
+                </div>
+
+                <!-- MESSAGE -->
+                <div class="form-group">
+                    <label>Pesan</label>
+                    <textarea rows="4" placeholder="Ucapan / Doa..."></textarea>
+                </div>
+
+                <!-- BUTTON -->
+                <button type="submit" class="btn-primary w-full">
+                    Kirim RSVP
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- WEDDING GIFT -->
+<section id="gift" class="section section-padding">
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="text-center mb-2xl reveal reveal-up">
+
+            <h2 class="opening-title">
+                Wedding Gift
+            </h2>
+
+            <p class="opening-text">
+                Tanpa mengurangi rasa hormat,
+                bagi Anda yang ingin memberikan tanda kasih
+                dapat melalui informasi berikut
+            </p>
+
+        </div>
+
+        <!-- GIFT CARD -->
+        <div class="glass gift-card reveal reveal-scale">
+
+            <!-- BANK -->
+            <div class="gift-item">
+
+                <h3 class="gift-title">Bank BCA</h3>
+
+                <div class="gift-copy-wrap">
+
+    <p id="rekening" class="gift-number">
+        1234567890
+    </p>
+
+    <button class="copy-btn" onclick="copyRekening()">
+        Salin
+    </button>
+
+</div>
+
+                <p class="gift-name">
+                    a.n Diana & Rizky
+                </p>
+
+            </div>
+
+            <div class="gift-divider">❦</div>
+
+            <!-- QR -->
+            <div class="gift-item">
+
+                <h3 class="gift-title">QR Payment</h3>
+
+                <div class="gift-qr">
+                    <img src="qris.png" alt="QRIS">
+                </div>
+
+                <p class="gift-name">
+                    Scan untuk memberi hadiah
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CLOSING -->
+<section id="closing" class="section section-padding">
+
+    <div class="container">
+
+        <div class="closing-wrapper glass reveal reveal-up">
+
+            <!-- PHOTO -->
+            <div class="closing-photo">
+                <img src="closing.jpg" alt="Wedding Photo">
+            </div>
+
+            <!-- TEXT -->
+            <h2 class="closing-title">
+                Terima Kasih
+            </h2>
+
+            <p class="closing-text">
+                Merupakan suatu kehormatan dan kebahagiaan bagi kami
+                apabila Bapak/Ibu/Saudara/i berkenan hadir
+                dan memberikan doa restu.
+            </p>
+
+            <div class="closing-divider">❦</div>
+
+            <p class="closing-doa">
+                “Semoga Allah menyempurnakan kebahagiaan kami
+                dan menjadikan pernikahan ini penuh keberkahan.”
+            </p>
+
+            <!-- SIGNATURE -->
+            <div class="closing-signature">
+
+                <div class="signature-name">
+                    Diana & Rizky
+                </div>
+
+                <span class="signature-label">
+                    Wassalamu’alaikum Warahmatullahi Wabarakatuh
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+</main>
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-inner">
+
+            <!-- DIVIDER GOLD -->
+            <div class="footer-divider"></div>
+
+            <!-- BRAND -->
+            <div class="footer-brand">
+                YLW.std
+            </div>
+
+            <!-- TEXT -->
+            <p class="footer-text">
+                Crafted with love for timeless wedding memories
+            </p>
+
+            <!-- IG -->
+            <a href="https://instagram.com" target="_blank" class="footer-ig">
+                @Instagram
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+<button
+    id="musicToggle"
+    class="music-btn">
+
+    ♪
+
+</button>
+<audio
+    id="bgMusic"
+    loop>
+
+    <source
+        src="backsound.mp3"
+        type="audio/mpeg">
+
+</audio>
+</body>
+<script>
+
+// ======================
+// ELEMENT
+// ======================
+
+const openButton =
+document.getElementById('openInvitation');
+
+const cover =
+document.getElementById('cover');
+
+const mainContent =
+document.getElementById('mainContent');
+
+const music =
+document.getElementById('bgMusic');
+
+const musicToggle =
+document.getElementById('musicToggle');
+
+
+// ======================
+// OPEN INVITATION
+// ======================
+
+openButton.addEventListener('click', () => {
+
+    document.body.classList.remove('lock');
+
+    cover.classList.add('hide');
+
+    mainContent.classList.add('show');
+
+    music.play();
+    musicToggle.classList.add('playing');
+
+    // 🔥 FIX JEDA: paksa scroll ke opening
+    setTimeout(() => {
+        document.getElementById('opening').scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }, 300);
+
+});
+
+
+// ======================
+// MUSIC TOGGLE
+// ======================
+
+musicToggle.addEventListener('click', () => {
+
+    if(music.paused){
+
+        music.play();
+
+        musicToggle.classList.add('playing');
+
+    }else{
+
+        music.pause();
+
+        musicToggle.classList.remove('playing');
+
+    }
+
+});
+
+// ======================
+// REVEAL
+// ======================
+
+const reveals =
+document.querySelectorAll('.reveal');
+
+const observer =
+new IntersectionObserver(
+
+(entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add(
+                'is-visible'
+            );
+
+        }else{
+
+            entry.target.classList.remove(
+                'is-visible'
+            );
+
+        }
+
+    });
+
+},
+
+{
+    threshold:0.15
+}
+
+);
+
+reveals.forEach(item=>{
+
+    observer.observe(item);
+
+});
+
+// ======================
+// COUNTDOWN TIMER
+// ======================
+
+const targetDate = new Date("October 10, 2026 08:00:00").getTime();
+
+const daysEl = document.getElementById("days");
+const hoursEl = document.getElementById("hours");
+const minutesEl = document.getElementById("minutes");
+const secondsEl = document.getElementById("seconds");
+
+function updateCountdown(){
+
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    daysEl.innerHTML = days < 10 ? "0" + days : days;
+    hoursEl.innerHTML = hours < 10 ? "0" + hours : hours;
+    minutesEl.innerHTML = minutes < 10 ? "0" + minutes : minutes;
+    secondsEl.innerHTML = seconds < 10 ? "0" + seconds : seconds;
+
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+
+// ======================
+// DOUBLE CLICK LOVE EFFECT
+// ======================
+
+const loveContainer = document.getElementById("love-container");
+
+document.querySelectorAll(".masonry-item").forEach(item => {
+
+    item.addEventListener("dblclick", (e) => {
+
+        // posisi klik
+        const x = e.clientX;
+        const y = e.clientY;
+
+        // buat beberapa love biar lebih hidup
+        for(let i = 0; i < 6; i++){
+
+            const love = document.createElement("div");
+            love.classList.add("love");
+
+            love.innerHTML = "❤";
+
+            love.style.left = (x + (Math.random() * 40 - 20)) + "px";
+            love.style.top = (y + (Math.random() * 40 - 20)) + "px";
+
+            love.style.fontSize = (16 + Math.random() * 10) + "px";
+
+            loveContainer.appendChild(love);
+
+            // hapus setelah animasi
+            setTimeout(() => {
+                love.remove();
+            }, 1500);
+
+        }
+
+    });
+
+});
+
+
+// ======================
+// RSVP SUBMIT (SIMPLE UX)
+// ======================
+
+const form = document.getElementById("rsvpForm");
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    alert("Terima kasih! RSVP Anda sudah terkirim 💍");
+
+    form.reset();
+});
+
+
+// ======================
+// COPY REKENING
+// ======================
+
+function copyRekening(){
+
+    const text = document.getElementById("rekening").innerText;
+
+    navigator.clipboard.writeText(text).then(() => {
+
+        // feedback sederhana
+        const btn = document.querySelector(".copy-btn");
+        const original = btn.innerText;
+
+        btn.innerText = "Tersalin ✓";
+
+        setTimeout(() => {
+            btn.innerText = original;
+        }, 1500);
+
+    });
+
+}
+</script>
+</html>
